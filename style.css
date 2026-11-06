@@ -1,0 +1,30 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(30, 173, 235);
+}
+
+.content {
+    grid-area: content;
+    background-color: lightgrey;
+}
