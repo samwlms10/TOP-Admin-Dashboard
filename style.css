@@ -9,14 +9,100 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar content";
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
     grid-area: header;
+    padding-top: 10px;
+}
+
+.header .header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header .search {
+    display: flex;
+    width: 80%;
+    gap: 10px;
+    padding-left: 3%;
+}
+
+.header .account {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+    align-items: center;
+    font-weight: 700;
+    padding-right: 20px;
+}
+
+.header img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header .header-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header .welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    gap: 20px;
+    align-items: center;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.header .welcome .welcome-account {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+    align-items: center;
+    padding-right: 20px;
+    flex-wrap: wrap;
+}
+
+.header button {
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    max-height: 40px;
+    min-width: 125px;
+    background-color: rgb(30, 173, 235);
+    border: none;
+    color: white;
+}
+
+.header input {
+    background-color: rgb(194, 218, 244);
+    width: 60%;
+    height: 25px;
+    border-radius: 50px;
+    border: none;
+}
+
+.header .search img {
+    padding-top: 5px;
 }
 
 .sidebar {
@@ -27,4 +113,86 @@ body {
 .content {
     grid-area: content;
     background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas: 
+    "content-boxes right-side-content";
+}
+
+.content-box-container {
+    grid-area: content-boxes;
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); */
+    padding: 0px 20px 10px 20px;
+}
+
+.row1, .row2, .row3 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding-top: 8px;
+}
+
+.content-boxes {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    height: 200px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.announcment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 8px 25px 10px 10px;
+    height: 400px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.announcments, .your-projects, .trending-title {
+    padding: 20px 0 5px 10px;
+}
+
+.right-side-content{
+    grid-area: right-side-content;
+}
+
+.trending-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 25px 0px 10px;
+    flex-grow: 1;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+.trending {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.trending-account-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.trending img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
 }
