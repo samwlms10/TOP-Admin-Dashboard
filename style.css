@@ -4,7 +4,7 @@
 }
 
 body {
-
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -43,6 +43,7 @@ body {
     align-items: center;
     font-weight: 700;
     padding-right: 20px;
+    text-wrap: nowrap;
 }
 
 .header img {
@@ -88,13 +89,13 @@ body {
     padding: 10px 20px;
     max-height: 40px;
     min-width: 125px;
-    background-color: rgb(30, 173, 235);
+    background-color: #1992D4;
     border: none;
     color: white;
 }
 
 .header input {
-    background-color: rgb(194, 218, 244);
+    background-color: #E2E8F0;
     width: 60%;
     height: 25px;
     border-radius: 50px;
@@ -105,14 +106,9 @@ body {
     padding-top: 5px;
 }
 
-.sidebar {
-    grid-area: sidebar;
-    background-color: rgb(30, 173, 235);
-}
-
 .content {
     grid-area: content;
-    background-color: lightgrey;
+    background-color: #E2E8F0;
     display: grid;
     grid-template-columns: 7fr 3fr;
     grid-template-areas: 
@@ -144,6 +140,15 @@ body {
     max-width: 300px;
     background-color: white;
     border-radius: 8px;
+    flex: 1 1 0px;
+    border-left: 5px solid #F0B429;
+}
+
+.content-box-images {
+    display: flex;
+    margin-top: auto;
+    align-self: flex-end;
+    gap: 15px;
 }
 
 .announcment-container {
@@ -155,6 +160,12 @@ body {
     padding: 10px;
     background-color: white;
     border-radius: 8px;
+}
+
+.content-boxes p, .announcments p, .trending p {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(88, 88, 88);
 }
 
 .announcments, .your-projects, .trending-title {
@@ -196,3 +207,55 @@ h3 {
     padding: 0;
     margin: 0;
 }
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #1992D4;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.sidebar .dashboard {
+    display: flex;
+    padding-bottom: 25px;
+    padding-top: 15px;
+    justify-content: center;
+}
+.dashboard h3 {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    gap: 10px;
+}
+
+.sidebar .nav-links {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    gap: 15px;
+}
+
+.sidebar .site-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-links, .site-links {
+    padding-left: 20px;
+}
+
+.image-links-together {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+
+}
+
