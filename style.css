@@ -113,6 +113,7 @@ body {
     grid-template-columns: 7fr 3fr;
     grid-template-areas: 
     "content-boxes right-side-content";
+    min-height: 100vh;
 }
 
 .content-box-container {
